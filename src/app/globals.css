@@ -1,0 +1,481 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ========================================================
+   🌸 SHREYA PASTEL BABY LIGHT PINK GINGHAM THEME (Canva Image 1)
+   ======================================================== */
+.theme-pink-gingham {
+  background-color: #fff0f4 !important;
+  background-image: 
+    linear-gradient(90deg, rgba(244, 114, 182, 0.22) 50%, transparent 50%),
+    linear-gradient(rgba(244, 114, 182, 0.22) 50%, transparent 50%) !important;
+  background-size: 32px 32px !important;
+  color: #1f2937 !important;
+}
+
+.theme-pink-gingham ::-webkit-scrollbar-thumb {
+  background: #f472b6 !important;
+}
+
+/* Typography Overrides in Shreya Theme */
+.theme-pink-gingham h1,
+.theme-pink-gingham h2,
+.theme-pink-gingham h3,
+.theme-pink-gingham h4,
+.theme-pink-gingham .text-white {
+  color: #1f2937 !important;
+}
+
+.theme-pink-gingham .text-slate-100,
+.theme-pink-gingham .text-slate-200,
+.theme-pink-gingham .text-slate-300 {
+  color: #374151 !important;
+}
+
+.theme-pink-gingham .text-slate-400 {
+  color: #64748b !important;
+}
+
+.theme-pink-gingham .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.theme-pink-gingham .text-indigo-300,
+.theme-pink-gingham .text-indigo-400,
+.theme-pink-gingham .text-amber-300,
+.theme-pink-gingham .text-amber-400,
+.theme-pink-gingham .text-rose-400 {
+  color: #db2777 !important;
+}
+
+/* Pure Creamy White Cards with Soft Pastel Pink Outline & Shadow */
+.theme-pink-gingham .bg-slate-950,
+.theme-pink-gingham .bg-slate-950\/95,
+.theme-pink-gingham .bg-slate-950\/90,
+.theme-pink-gingham .bg-slate-950\/85,
+.theme-pink-gingham .bg-slate-950\/80,
+.theme-pink-gingham .bg-slate-950\/75,
+.theme-pink-gingham .bg-slate-950\/70,
+.theme-pink-gingham .bg-slate-950\/60,
+.theme-pink-gingham .bg-slate-950\/40,
+.theme-pink-gingham .bg-slate-900,
+.theme-pink-gingham .bg-slate-900\/95,
+.theme-pink-gingham .bg-slate-900\/90,
+.theme-pink-gingham .bg-slate-900\/85,
+.theme-pink-gingham .bg-slate-900\/80,
+.theme-pink-gingham .bg-slate-900\/70,
+.theme-pink-gingham .bg-slate-900\/60,
+.theme-pink-gingham .bg-slate-900\/40,
+.theme-pink-gingham .bg-indigo-950\/40,
+.theme-pink-gingham .bg-indigo-950\/60 {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-color: #fbcfe8 !important;
+  box-shadow: 0 10px 25px -5px rgba(244, 114, 182, 0.16), 0 8px 10px -6px rgba(244, 114, 182, 0.08) !important;
+}
+
+.theme-pink-gingham .bg-slate-800,
+.theme-pink-gingham .bg-slate-800\/90,
+.theme-pink-gingham .bg-slate-800\/80,
+.theme-pink-gingham .bg-slate-800\/60,
+.theme-pink-gingham .bg-slate-800\/50,
+.theme-pink-gingham .bg-slate-800\/40 {
+  background-color: #fdf2f8 !important;
+  border-color: #fbcfe8 !important;
+  color: #374151 !important;
+}
+
+.theme-pink-gingham .hover\:bg-slate-800\/40:hover,
+.theme-pink-gingham .hover\:bg-slate-800:hover,
+.theme-pink-gingham .hover\:bg-slate-700:hover {
+  background-color: #fff1f5 !important;
+}
+
+/* Button & Action Harmonization in Shreya Theme (Canva Pink) */
+.theme-pink-gingham button.bg-rose-600,
+.theme-pink-gingham button.bg-amber-500,
+.theme-pink-gingham button.bg-indigo-600,
+.theme-pink-gingham button.bg-blue-600,
+.theme-pink-gingham .bg-rose-600,
+.theme-pink-gingham .bg-indigo-600,
+.theme-pink-gingham .bg-amber-500 {
+  background: linear-gradient(135deg, #f472b6 0%, #fb7185 100%) !important;
+  color: #ffffff !important;
+  border-color: #f472b6 !important;
+  box-shadow: 0 4px 14px rgba(244, 114, 182, 0.35) !important;
+}
+
+.theme-pink-gingham button.bg-rose-600:hover,
+.theme-pink-gingham button.bg-amber-500:hover,
+.theme-pink-gingham button.bg-indigo-600:hover,
+.theme-pink-gingham button.bg-blue-600:hover {
+  background: linear-gradient(135deg, #f472b6 0%, #e11d48 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Table in Shreya Theme */
+.theme-pink-gingham thead,
+.theme-pink-gingham .bg-slate-950\/90 thead {
+  background-color: #fce7f3 !important;
+  border-color: #fbcfe8 !important;
+}
+
+.theme-pink-gingham thead th {
+  color: #9d174d !important;
+  background-color: #fce7f3 !important;
+}
+
+.theme-pink-gingham tbody tr {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.theme-pink-gingham tbody tr:hover {
+  background-color: #fff1f5 !important;
+}
+
+.theme-pink-gingham .divide-slate-800\/60 > :not([hidden]) ~ :not([hidden]),
+.theme-pink-gingham .border-slate-800,
+.theme-pink-gingham .border-slate-800\/80,
+.theme-pink-gingham .border-slate-800\/60,
+.theme-pink-gingham .border-slate-700,
+.theme-pink-gingham .border-slate-700\/60,
+.theme-pink-gingham .border-indigo-500\/30,
+.theme-pink-gingham .border-amber-500\/30 {
+  border-color: #fce7f3 !important;
+}
+
+/* Inputs, Selects, Textareas */
+.theme-pink-gingham input,
+.theme-pink-gingham select,
+.theme-pink-gingham textarea {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border: 2px solid #fbcfe8 !important;
+}
+
+.theme-pink-gingham input::placeholder,
+.theme-pink-gingham textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Light Mode Pastel Badges */
+.theme-pink-gingham .bg-emerald-500\/10,
+.theme-pink-gingham .bg-emerald-500\/20 {
+  background-color: #dcfce7 !important;
+  color: #166534 !important;
+  border-color: #86efac !important;
+}
+
+.theme-pink-gingham .bg-amber-500\/10,
+.theme-pink-gingham .bg-amber-500\/15,
+.theme-pink-gingham .bg-amber-500\/20 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+.theme-pink-gingham .bg-rose-500\/10,
+.theme-pink-gingham .bg-rose-500\/20 {
+  background-color: #ffe4e6 !important;
+  color: #9f1239 !important;
+  border-color: #fecdd3 !important;
+}
+
+.theme-pink-gingham .bg-purple-500\/10,
+.theme-pink-gingham .bg-purple-500\/15,
+.theme-pink-gingham .bg-purple-500\/20 {
+  background-color: #f3e8ff !important;
+  color: #6b21a8 !important;
+  border-color: #d8b4fe !important;
+}
+
+.theme-pink-gingham .bg-indigo-500\/10,
+.theme-pink-gingham .bg-indigo-500\/20 {
+  background-color: #fce7f3 !important;
+  color: #9d174d !important;
+  border-color: #fbcfe8 !important;
+}
+
+.theme-pink-gingham .bg-pink-500\/10,
+.theme-pink-gingham .bg-pink-500\/15,
+.theme-pink-gingham .bg-pink-500\/20 {
+  background-color: #fce7f3 !important;
+  color: #9d174d !important;
+  border-color: #fbcfe8 !important;
+}
+
+/* Modal Backdrop */
+.theme-pink-gingham .bg-black\/75,
+.theme-pink-gingham .bg-black\/60 {
+  background-color: rgba(74, 29, 52, 0.35) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* ========================================================
+   🌊 SHIVAM PASTEL SKY BLUE GINGHAM THEME (Canva Image 2)
+   ======================================================== */
+.theme-blue-gingham {
+  background-color: #f0f7ff !important;
+  background-image: 
+    linear-gradient(90deg, rgba(56, 189, 248, 0.22) 50%, transparent 50%),
+    linear-gradient(rgba(56, 189, 248, 0.22) 50%, transparent 50%) !important;
+  background-size: 32px 32px !important;
+  color: #0f172a !important;
+}
+
+.theme-blue-gingham ::-webkit-scrollbar-thumb {
+  background: #38bdf8 !important;
+}
+
+/* Typography Overrides in Shivam Theme */
+.theme-blue-gingham h1,
+.theme-blue-gingham h2,
+.theme-blue-gingham h3,
+.theme-blue-gingham h4,
+.theme-blue-gingham .text-white {
+  color: #0f172a !important;
+}
+
+.theme-blue-gingham .text-slate-100,
+.theme-blue-gingham .text-slate-200,
+.theme-blue-gingham .text-slate-300 {
+  color: #1e293b !important;
+}
+
+.theme-blue-gingham .text-slate-400 {
+  color: #64748b !important;
+}
+
+.theme-blue-gingham .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.theme-blue-gingham .text-indigo-300,
+.theme-blue-gingham .text-indigo-400,
+.theme-blue-gingham .text-amber-300,
+.theme-blue-gingham .text-amber-400,
+.theme-blue-gingham .text-rose-400 {
+  color: #0284c7 !important;
+}
+
+/* Pure Ice White Cards with Soft Pastel Sky-Blue Outline & Shadow */
+.theme-blue-gingham .bg-slate-950,
+.theme-blue-gingham .bg-slate-950\/95,
+.theme-blue-gingham .bg-slate-950\/90,
+.theme-blue-gingham .bg-slate-950\/85,
+.theme-blue-gingham .bg-slate-950\/80,
+.theme-blue-gingham .bg-slate-950\/75,
+.theme-blue-gingham .bg-slate-950\/70,
+.theme-blue-gingham .bg-slate-950\/60,
+.theme-blue-gingham .bg-slate-950\/40,
+.theme-blue-gingham .bg-slate-900,
+.theme-blue-gingham .bg-slate-900\/95,
+.theme-blue-gingham .bg-slate-900\/90,
+.theme-blue-gingham .bg-slate-900\/85,
+.theme-blue-gingham .bg-slate-900\/80,
+.theme-blue-gingham .bg-slate-900\/70,
+.theme-blue-gingham .bg-slate-900\/60,
+.theme-blue-gingham .bg-slate-900\/40,
+.theme-blue-gingham .bg-indigo-950\/40,
+.theme-blue-gingham .bg-indigo-950\/60 {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-color: #bae6fd !important;
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.16), 0 8px 10px -6px rgba(56, 189, 248, 0.08) !important;
+}
+
+.theme-blue-gingham .bg-slate-800,
+.theme-blue-gingham .bg-slate-800\/90,
+.theme-blue-gingham .bg-slate-800\/80,
+.theme-blue-gingham .bg-slate-800\/60,
+.theme-blue-gingham .bg-slate-800\/50,
+.theme-blue-gingham .bg-slate-800\/40 {
+  background-color: #f0f9ff !important;
+  border-color: #bae6fd !important;
+  color: #1e293b !important;
+}
+
+.theme-blue-gingham .hover\:bg-slate-800\/40:hover,
+.theme-blue-gingham .hover\:bg-slate-800:hover,
+.theme-blue-gingham .hover\:bg-slate-700:hover {
+  background-color: #f0f9ff !important;
+}
+
+/* Button & Action Harmonization in Shivam Theme (Canva Blue) */
+.theme-blue-gingham button.bg-rose-600,
+.theme-blue-gingham button.bg-amber-500,
+.theme-blue-gingham button.bg-indigo-600,
+.theme-blue-gingham button.bg-blue-600,
+.theme-blue-gingham .bg-rose-600,
+.theme-blue-gingham .bg-indigo-600,
+.theme-blue-gingham .bg-amber-500 {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35) !important;
+}
+
+.theme-blue-gingham button.bg-rose-600:hover,
+.theme-blue-gingham button.bg-amber-500:hover,
+.theme-blue-gingham button.bg-indigo-600:hover,
+.theme-blue-gingham button.bg-blue-600:hover {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Table in Shivam Theme */
+.theme-blue-gingham thead,
+.theme-blue-gingham .bg-slate-950\/90 thead {
+  background-color: #e0f2fe !important;
+  border-color: #bae6fd !important;
+}
+
+.theme-blue-gingham thead th {
+  color: #0369a1 !important;
+  background-color: #e0f2fe !important;
+}
+
+.theme-blue-gingham tbody tr {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.theme-blue-gingham tbody tr:hover {
+  background-color: #f0f9ff !important;
+}
+
+.theme-blue-gingham .divide-slate-800\/60 > :not([hidden]) ~ :not([hidden]),
+.theme-blue-gingham .border-slate-800,
+.theme-blue-gingham .border-slate-800\/80,
+.theme-blue-gingham .border-slate-800\/60,
+.theme-blue-gingham .border-slate-700,
+.theme-blue-gingham .border-slate-700\/60,
+.theme-blue-gingham .border-indigo-500\/30,
+.theme-blue-gingham .border-amber-500\/30 {
+  border-color: #e0f2fe !important;
+}
+
+/* Inputs, Selects, Textareas */
+.theme-blue-gingham input,
+.theme-blue-gingham select,
+.theme-blue-gingham textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 2px solid #bae6fd !important;
+}
+
+.theme-blue-gingham input::placeholder,
+.theme-blue-gingham textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Light Mode Badges in Shivam Theme */
+.theme-blue-gingham .bg-emerald-500\/10,
+.theme-blue-gingham .bg-emerald-500\/20 {
+  background-color: #dcfce7 !important;
+  color: #166534 !important;
+  border-color: #86efac !important;
+}
+
+.theme-blue-gingham .bg-amber-500\/10,
+.theme-blue-gingham .bg-amber-500\/15,
+.theme-blue-gingham .bg-amber-500\/20 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+.theme-blue-gingham .bg-rose-500\/10,
+.theme-blue-gingham .bg-rose-500\/20 {
+  background-color: #ffe4e6 !important;
+  color: #9f1239 !important;
+  border-color: #fecdd3 !important;
+}
+
+.theme-blue-gingham .bg-purple-500\/10,
+.theme-blue-gingham .bg-purple-500\/15,
+.theme-blue-gingham .bg-purple-500\/20 {
+  background-color: #e0e7ff !important;
+  color: #4338ca !important;
+  border-color: #c7d2fe !important;
+}
+
+.theme-blue-gingham .bg-sky-500\/10,
+.theme-blue-gingham .bg-sky-500\/15,
+.theme-blue-gingham .bg-sky-500\/20 {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+  border-color: #bae6fd !important;
+}
+
+/* Modal Backdrop */
+.theme-blue-gingham .bg-black\/75,
+.theme-blue-gingham .bg-black\/60 {
+  background-color: rgba(12, 74, 110, 0.35) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* ========================================================
+   CUTE STICKER & KAWAII ACCENTS
+   ======================================================== */
+.sticker-badge {
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+.sticker-badge:hover {
+  transform: scale(1.12) rotate(5deg);
+}
+
+.sticker-pill-pink {
+  background-color: #ffffff;
+  border: 2px solid #fbcfe8;
+  color: #9d174d;
+  box-shadow: 0 4px 14px rgba(244, 114, 182, 0.15);
+}
+
+.sticker-pill-blue {
+  background-color: #ffffff;
+  border: 2px solid #bae6fd;
+  color: #0369a1;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.15);
+}
+
+/* Paper cut card style */
+.paper-card-pink {
+  background: #ffffff;
+  border: 2px solid #fbcfe8;
+  box-shadow: 0 10px 25px -5px rgba(244, 114, 182, 0.18), 0 8px 10px -6px rgba(244, 114, 182, 0.08);
+}
+
+.paper-card-blue {
+  background: #ffffff;
+  border: 2px solid #bae6fd;
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.18), 0 8px 10px -6px rgba(56, 189, 248, 0.08);
+}
