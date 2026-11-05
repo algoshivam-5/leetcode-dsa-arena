@@ -6,6 +6,7 @@ import Sidebar from "@/components/Sidebar";
 import LiveNotificationToast from "@/components/LiveNotificationToast";
 import { User } from "@/types";
 import { getCurrentUser } from "@/lib/frontendStore";
+import { initRealtimeSync } from "@/lib/realtimeSync";
 import {
   BunnyCherrySticker,
   IceCreamSticker,
@@ -31,6 +32,9 @@ export default function DashboardLayout({
   });
 
   useEffect(() => {
+    // Start Cloud Real-time Multi-device Sync (SSE)
+    initRealtimeSync();
+
     function loadUser() {
       const u = getCurrentUser();
       setUser(u);

@@ -21,6 +21,7 @@ import {
   INITIAL_ACTIVITIES,
   INITIAL_COINS,
 } from "./initialData";
+import { broadcastProblemStatus, broadcastChatMessage } from "./realtimeSync";
 
 export const USERS_CONFIG: Record<
   UserRole,
@@ -259,12 +260,36 @@ export function toggleProblemStatus(
         window.dispatchEvent(new CustomEvent("partner_solved_problem", { detail: activity }));
       }
     }
+
+    // Broadcast status change to real-time cloud channel across all devices
+    const problem = problems.find((p) => p.id === problemId);
+    const partnerUserId = targetUserId === "user_shreya" ? "user_shivam" : "user_shreya";
+    const isPartnerDone = userProblems[`${partnerUserId}_${problemId}`]?.status === "done";
+    broadcastProblemStatus(
+      targetUserId,
+      targetUserId === "user_shreya" ? "Shreya Gaur" : "Shivam Sharma",
+      problemId,
+      problem?.title || "Problem",
+      statusToSet,
+      isPartnerDone
+    );
   } else {
     delete userProblems[key];
     if (current?.status === "done") {
       coins[userRole] = Math.max(0, (coins[userRole] || 1) - 1);
       saveToStorage(STORAGE_KEYS.COINS, coins);
     }
+
+    // Also broadcast removal / todo to cloud
+    const problem = problems.find((p) => p.id === problemId);
+    broadcastProblemStatus(
+      targetUserId,
+      targetUserId === "user_shreya" ? "Shreya Gaur" : "Shivam Sharma",
+      problemId,
+      problem?.title || "Problem",
+      "todo",
+      false
+    );
   }
 
   saveToStorage(STORAGE_KEYS.USER_PROBLEMS, userProblems);
@@ -561,6 +586,7 @@ export function sendChatMessage(content: string, senderId: string, receiverId: s
 
   messages.push(newMsg);
   saveToStorage(STORAGE_KEYS.MESSAGES, messages);
+  broadcastChatMessage(newMsg);
   return newMsg;
 }
 
